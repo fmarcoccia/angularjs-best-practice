@@ -13,7 +13,7 @@
     function AboutController($scope, logger, getFake) {
 
         let aboutCtrl = this;
-        const COMPONENT_NAME = 'About Ctrl';
+        const COMPONENT_NAME = 'Fake Promise Ctrl';
 
         aboutCtrl.pageTitle = 'About me';
 
