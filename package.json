@@ -1,0 +1,25 @@
+{
+  "name": "generator-jsgoodpractice",
+  "version": "1.0.0",
+  "description": "generate project with js good practice",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.1.0",
+    "grunt-prompt": "^1.3.3",
+    "http-server": "^0.9.0"
+  },
+  "author": "Fabio Marcoccia",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "generator-jsgoodpractice",
+  "description": "generate project with js good practice",
+  "main": "",
+  "authors": [
+    "Fabio Marcoccia"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "angular-material": "^1.1.3"
+  }
+}
