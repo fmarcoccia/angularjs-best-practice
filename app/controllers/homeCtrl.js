@@ -18,12 +18,12 @@
 
         //Get up when all contents is loaded
         $scope.$on('$viewContentLoaded', function() {
-            logger.getInfo('Loaded '+COMPONENT_NAME);
+            logger.printInfo('Loaded '+COMPONENT_NAME);
         });
 
         //Get up when ctrl was destroyed
         $scope.$on('$destroy', function() {
-            logger.getInfo('Destroyed '+COMPONENT_NAME);
+            logger.printInfo('Destroyed '+COMPONENT_NAME);
         });
 
         homeCtrl.exampleOfObj = {

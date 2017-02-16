@@ -11,15 +11,15 @@
     function logger($log) {
 
         return {
-            getInfo: getInfo,
-            getError: getError
+            printInfo: printInfo,
+            printError: printError
         };
 
-       function getInfo(info) {
+       function printInfo(info) {
            $log.info(info);
        }
 
-       function getError(error) {
+       function printError(error) {
            $log.error(error);
        }
 

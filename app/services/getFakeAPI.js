@@ -24,12 +24,12 @@
         }
 
         function getFakeFailed(e) {
-            var newMessage = 'XHR Failed for getCustomer';
+            var newMessage = 'XHR Failed';
             if (e.data && e.data.description) {
                 newMessage = newMessage + '\n' + e.data.description;
             }
             e.data.description = newMessage;
-            logger.getError(newMessage);
+            logger.printError(newMessage);
             return $q.reject(e);
         }
     }
