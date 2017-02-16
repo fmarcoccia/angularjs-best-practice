@@ -5,8 +5,7 @@
     angular.module('app.services').
         factory('getFake', getFake);
 
-    getFake.$inject = ['$q','logger','$http'];
-
+    /* @ngInject */
     function getFake($q, logger, $http){
 
         return {

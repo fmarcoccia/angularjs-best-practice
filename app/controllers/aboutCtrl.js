@@ -8,8 +8,7 @@
     module('app.controllers').
     controller('AboutController', AboutController);
 
-    AboutController.$inject = ['$scope','logger', 'getFake'];
-
+    /* @ngInject */
     function AboutController($scope, logger, getFake) {
 
         let aboutCtrl = this;

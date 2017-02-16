@@ -8,8 +8,7 @@
         module('app.controllers').
         controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope','logger'];
-
+    /* @ngInject */
     function HomeController($scope, logger) {
 
         let homeCtrl = this;

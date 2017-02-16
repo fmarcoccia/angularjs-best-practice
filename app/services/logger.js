@@ -3,11 +3,14 @@
  */
 (function () {
    'use strict';
+    /**
+     * logger factory
+     * @namespace Factories
+     */
     angular.module('app.services').
         factory('logger', logger);
 
-    logger.$inject = ['$log'];
-
+    /* @ngInject */
     function logger($log) {
 
         return {
