@@ -14,15 +14,27 @@ module.exports = function(grunt) {
                 src: 'src/<%= pkg.name %>.js',
                 dest: 'build/<%= pkg.name %>.min.js'
             }
+        },
+        tags: {
+            build: {
+                src: [
+                    'app/lib/*/*.min.js',
+                    'app/app.*.js',
+                    'app/controllers/**/*.js',
+                    'app/services/**/*.js'
+                ],
+                dest: 'app/index.html'
+            }
         }
     });
 
     // Load the plugin that provides the "uglify" task.
+    grunt.registerTask('default', ['uglify','tags']);
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-prompt');
     grunt.loadNpmTasks('grunt-ng-annotate');
+    grunt.loadNpmTasks('grunt-script-link-tags');
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+
 
 
 
