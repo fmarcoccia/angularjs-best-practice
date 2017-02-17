@@ -25,15 +25,35 @@ module.exports = function(grunt) {
                 ],
                 dest: 'app/index.html'
             }
+        },
+        replace: {
+            dist: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'env',
+                            replacement: 'development'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        src: ['app/env/env.js'],
+                        dest: 'app/env/env.details.js'
+                    }
+                ]
+            }
         }
     });
 
     // Load the plugin that provides the "uglify" task.
-    grunt.registerTask('default', ['uglify','tags']);
+    grunt.registerTask('default', ['uglify','tags','replace']);
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-script-link-tags');
+    grunt.loadNpmTasks('grunt-replace');
     // Default task(s).
+
 
 
 
