@@ -3,10 +3,10 @@
  */
 (function () {
     'use strict';
-    angular.module('app.constants').
-    constant('ENV',{
-        'environments': 'development',
-        'version': 0.9
-    });
-
+    angular.module('app.constants').constant('ENV',
+        {
+            'environments': 'development',
+            'version': 0.9
+        });
 })();
+

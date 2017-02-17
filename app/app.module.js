@@ -3,10 +3,9 @@
  */
 (function () {
  'use strict';
-
  angular.module('app.directives',[]);
- angular.module('app.services',[]);
  angular.module('app.constants',[]);
+ angular.module('app.services',['app.constants']);
  angular.module('app.controllers',['app.services']);
  angular.module('app', ['ngRoute','ngMaterial','app.constants','app.controllers','app.services']);
 

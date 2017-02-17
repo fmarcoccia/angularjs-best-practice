@@ -9,7 +9,7 @@
     controller('AboutController', AboutController);
 
     /* @ngInject */
-    function AboutController($scope, logger, getFake) {
+    function AboutController($scope, logger, getFake, envService) {
 
         let aboutCtrl = this;
         const COMPONENT_NAME = 'Fake Promise Ctrl';
@@ -19,6 +19,7 @@
         //Get up when all contents is loaded
         $scope.$on('$viewContentLoaded', function () {
             logger.printInfo('Loaded ' + COMPONENT_NAME);
+            logger.printInfo(envService.getEnv());
         });
 
         //Get up when ctrl was destroyed

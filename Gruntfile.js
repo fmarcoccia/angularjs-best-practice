@@ -19,9 +19,11 @@ module.exports = function(grunt) {
             build: {
                 src: [
                     'app/lib/*/*.min.js',
-                    'app/app.*.js',
+                    'app/app.module.js',
+                    'app/app.config.js',
                     'app/controllers/**/*.js',
-                    'app/services/**/*.js'
+                    'app/services/**/*.js',
+                    'app/env/env.details.js'
                 ],
                 dest: 'app/index.html'
             }
@@ -33,7 +35,11 @@ module.exports = function(grunt) {
                         {
                             match: 'env',
                             replacement: 'development'
-                        }
+                        },
+                        {
+                            match: 'ENV',
+                            replacement: 'ENV'
+                        },
                     ]
                 },
                 files: [
